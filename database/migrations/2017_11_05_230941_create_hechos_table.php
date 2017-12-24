@@ -11,8 +11,16 @@ class CreateHechosTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public function up(){
+
+        //Asi se referencia en la tabla una relacion con otra tabla
+        //Aquí la tabla roles esta referenciada con la id user_id al id de la tabla users
+        /*public function up(){
+        Schema::table('roles', function(Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users');
+            });
+        }*/
+
         Schema::create('hechos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo', 255)->nullable();
