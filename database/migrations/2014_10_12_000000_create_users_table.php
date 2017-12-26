@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable();
-            $table->string('rol'); //1->admin,2->alumno,3->profesor
+            $table->string('rol')->nullable(); //admin,alumno,profesor
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
@@ -31,6 +31,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuarios');
+        Schema::dropIfExists('users');
     }
 }

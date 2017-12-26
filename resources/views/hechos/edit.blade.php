@@ -1,6 +1,5 @@
-@extends('alumno.master')
+@extends('layouts.master')
 @section('title', 'Editar un hecho')
-
 @section('content')
     <div class="container col-md-8 col-md-offset-2">
         <div class="well well bs-component">
@@ -22,18 +21,17 @@
                 <fieldset>
                     <legend>Editar Hecho</legend>
                     <div class="form-group">
-                        <label for="title" class="col-lg-2 control-label">Título</label>
+                        <label for="titulo" class="col-lg-2 control-label">Título</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" id="title" name="title" value="{!! $hecho->title !!}">
+                            <input type="text" class="form-control" id="titulo" name="titulo" value="{!! $hecho->titulo !!}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="content" class="col-lg-2 control-label">Contenido</label>
+                        <label for="descripcion" class="col-lg-2 control-label">Contenido</label>
                         <div class="col-lg-10">
-                            <textarea class="form-control" rows="3" id="content" name="content">{!! $hecho->content !!}</textarea>
+                            <textarea class="form-control" rows="3" id="descripcion" name="descripcion">{!! $hecho->descripcion !!}</textarea>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <button class="btn btn-default">Cancelar</button>

@@ -1,4 +1,4 @@
-@extends('alumno.master')
+@extends('layouts.master')
 @section('title', 'Ver un hecho')
 @section('content')
 
@@ -12,11 +12,11 @@
                         </tr>
                         <tr>
                             <td><strong>Titulo</strong></td>
-                            <td>{!! $hecho->title !!}</td>
+                            <td>{!! $hecho->titulo !!}</td>
                         </tr>
                         <tr>
                             <td><strong>Contenido</strong></td>
-                            <td>{!! $hecho->content !!}</td>
+                            <td>{!! $hecho->descripcion !!}</td>
                         </tr>
                     </table>
                 </div>

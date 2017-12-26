@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
     use Notifiable;
 
     /**
@@ -15,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'rol_id', 'email', 'password',
+        'name', 'rol', 'email', 'password',
     ];
 
     /**
@@ -26,6 +27,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
 
 
     /*public function role(){
@@ -41,7 +44,6 @@ class User extends Authenticatable
             }
 
         }
-
         return false;
 
     }

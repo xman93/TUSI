@@ -15,6 +15,8 @@ class CreateEtiquetasTable extends Migration
 
         Schema::create('etiquetas', function (Blueprint $table) {
             $table->increments('id');
+            //$table->foreign('id_hecho')->references('id')->on('hechos');
+            $table->integer('id_hecho');
             $table->string('nombre');
             $table->rememberToken();
             $table->timestamps();

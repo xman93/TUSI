@@ -17,7 +17,7 @@
 				@if(Auth::guest())
 					<li><a href="{{ route('login') }}">Acceso</a></li>
 				@elseif (Auth::user()->rol === 'admin')
-					<li><a href="/admin/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+					<li><a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
 					<li><a href="/admin/altas">Alta de Usuarios</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -37,9 +37,11 @@
 						</ul>
 					</li>
 				@elseif(Auth::user()->rol === 'alumno')
-					<li><a href="/alumnos/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+					<li><a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
 					<li><a href="/hechos">Listado de Hechos</a></li>
-					<li><a href="/nuevo-hecho">Crear Nuevo</a></li>
+					<li><a href="/nuevo-hecho">Crear Nuevo Hecho</a></li>
+					<li><a href="/generar-informe">Generar Informe</a></li>
+					<li><a href="#">Dar de Alta Invitados</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 							{{ Auth::user()->email }} <span class="caret"></span>
